@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body { font-family: Arial, sans-serif;    background: linear-gradient(110deg, rgba(154, 203, 129, 0.96), rgba(237, 115, 16, 0.9));;
+      display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .welcome-box { background: #fff; padding: 20px; border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1); text-align: center; }
+    button { background: #f44336; color: white; border: none; padding: 10px 20px;
+      margin-top: 15px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #d32f2f; }
+     button.goto {  background: linear-gradient(80deg, rgba(216, 83, 26, 0.96), rgba(12, 237, 23, 0.9)); color: white; border: none; padding: 10px 20px;
+      margin-top: 15px; border-radius: 5px; cursor: pointer; }
+    button.goto:hover {  background: linear-gradient(80deg, rgba(80, 235, 9, 0.96), rgba(4, 202, 113, 0.829));  }
+  </style>
+</head>
+<body style="background-image: url('../img/african-animals-in-the-jungle-cute-cartoon-animals-set-of-animals-vector.jpg'); 
+             background-size: cover; 
+             background-repeat: no-repeat; 
+             background-position: center;
+             
+             ">
+
+  <div class="welcome-box">
+    <h2>Welcome, <span id="user"></span> 👋</h2>
+    <button onclick="logout()">Logout</button>
+    <button class="goto" onclick="gotoquiz()">GO to the quiz page</button>
+  </div>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    if (!user) {
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("user").textContent = user;
+    }
+
+    function gotoquiz(){
+      window.location.href = "./quiz.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "../index.html";
+    }
+  </script>
+
+</body>
+</html>

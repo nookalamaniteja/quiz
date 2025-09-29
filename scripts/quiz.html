@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Quizz Game</title>
+</head>
+<body>
+<div id="quiz-app" style="background-image: url('../img/tenor.gif'); 
+             background-size: cover; 
+             background-repeat: no-repeat; 
+             background-position: center;
+             ">
+
+    <section class="center-card quiz-details" id="quiz-details">
+        <img  style="border-radius: 15px; height: 40%;" src="../img/WhatsApp Image 2025-09-29 at 12.30.27 PM.jpeg">
+        <h2 class="quiz-details__title"></h2>
+        <p class="quiz-details__description"></p>
+        <div class="quiz-details__meta --qc">
+            <span>Question Count:</span><strong>--</strong>
+        </div>
+        <div class="quiz-details__meta --t">
+            <span>Time:</span><strong>--</strong>
+        </div>
+
+        <div class="quiz-details__start-btn-wrapper">
+            <button class="default-btn quiz-details__start-btn">
+                Start
+            </button>
+        </div>
+    </section>
+
+    <section class="center-card questions-card" id="questions-card" >
+        <div class="questions-card__progress-wrapper">
+            <span class="questions-card__q-count">Question 0/0</span>
+            <span class="questions-card__remaining-time">00:00</span>
+            <div class="questions-card__progress"><span class="--value"></span></div>
+        </div>
+        <p class="questions-card__q-title" id="question-title" data-qn="Q 1:"></p>
+
+        <div class="question-card__options">
+            <div class="question-card__option __one">
+                <input type="radio" name="question-option" id="option-one" value="0"/>
+                <label class="question-card__option__value" for="option-one"></label>
+            </div>
+            <div class="question-card__option __two">
+                <input type="radio" name="question-option" id="option-two" value="1"/>
+                <label class="question-card__option__value"
+                       for="option-two"></label>
+            </div>
+            <div class="question-card__option __three">
+                <input type="radio" name="question-option" id="option-three" value="2"/>
+                <label class="question-card__option__value"
+                       for="option-three"></label>
+            </div>
+            <div class="question-card__option __four">
+                <input type="radio" name="question-option" id="option-four" value="3"/>
+                <label class="question-card__option__value"
+                       for="option-four"></label>
+            </div>
+        </div>
+
+        <div class="question-card-buttons">
+            <button class="default-btn question-card-buttons__stop"
+                    id="stop-btn">Stop
+            </button>
+            <button class="default-btn question-card-buttons__next"
+                    id="next-btn">Next
+            </button>
+        </div>
+    </section>
+
+    <section class="center-card result-card" id="result-card">
+        <img  style ="width: 60%; height: 60%; border-radius: 9px;" src="../img/WhatsApp Image 2025-09-29 at 10.25.47 AM.jpeg">
+        <span class="result-card__score__lbl">Good job! Your total score is:</span>
+        <h2 class="result-card__score" id="score">0</h2>
+
+        <div class="result-card-buttons">
+            <button class="default-btn" id="go-to-home">Play Again</button>
+        </div>
+    </section>
+
+</div>
+<script src="./quiz.js"></script>
+<script src="./elements-helper.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
